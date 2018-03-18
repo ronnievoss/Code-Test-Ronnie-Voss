@@ -288,21 +288,21 @@ class AddContactViewController: UITableViewController, UITextFieldDelegate {
             case .addresses:
                 let newObject = Address(context: managedObjectContext!)
                 self.contact?.addToAddresses(newObject)
-                newObject.createdAt = Date().timeIntervalSinceReferenceDate
+                newObject.createdAt = Date().timeIntervalSince1970
                 newObject.index = String(0)
                 newObject.label = "Home"
                 tableView.insertRows(at: [indexPath], with: .automatic)
             case .phoneNumbers:
                 let newObject = PhoneNumber(context: managedObjectContext!)
                 self.contact?.addToPhoneNumbers(newObject)
-                newObject.createdAt = Date().timeIntervalSinceReferenceDate
+                newObject.createdAt = Date().timeIntervalSince1970
                 newObject.index = String(0)
                 newObject.label = "Home"
                 tableView.insertRows(at: [indexPath], with: .automatic)
             case .emailAddresses:
                 let newObject = EmailAddress(context: managedObjectContext!)
                 self.contact?.addToEmailAddresses(newObject)
-                newObject.createdAt = Date().timeIntervalSinceReferenceDate
+                newObject.createdAt = Date().timeIntervalSince1970
                 newObject.index = String(0)
                 newObject.label = "Home"
                 tableView.insertRows(at: [indexPath], with: .automatic)
@@ -422,6 +422,7 @@ class AddContactViewController: UITableViewController, UITextFieldDelegate {
                 default:
                     return
                 }
+                navigationItem.rightBarButtonItem?.isEnabled = true
             }
         }
     }
@@ -601,3 +602,4 @@ class AddContactViewController: UITableViewController, UITextFieldDelegate {
         birthdateTextField?.text = contact?.formattedBirthdate
     }
 }
+
