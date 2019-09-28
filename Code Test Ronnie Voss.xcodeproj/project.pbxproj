@@ -44,7 +44,7 @@
 
 /* Begin PBXFileReference section */
 		2E09A7E81F903CF30046D293 /* LabelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelViewController.swift; sourceTree = "<group>"; };
-		2E4E51EC1F8EE82700E5A438 /* Code Test Ronnie Voss.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Code Test Ronnie Voss.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E4E51EC1F8EE82700E5A438 /* Contacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Contacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E4E51EF1F8EE82700E5A438 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2E4E51F21F8EE82700E5A438 /* Code_Test_Ronnie_Voss.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Code_Test_Ronnie_Voss.xcdatamodel; sourceTree = "<group>"; };
 		2E4E51F41F8EE82700E5A438 /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
@@ -105,7 +105,7 @@
 		2E4E51ED1F8EE82700E5A438 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2E4E51EC1F8EE82700E5A438 /* Code Test Ronnie Voss.app */,
+				2E4E51EC1F8EE82700E5A438 /* Contacts.app */,
 				2E4E52051F8EE82700E5A438 /* Code Test Ronnie VossTests.xctest */,
 				2E4E52101F8EE82700E5A438 /* Code Test Ronnie VossUITests.xctest */,
 			);
@@ -169,7 +169,7 @@
 			);
 			name = "Code Test Ronnie Voss";
 			productName = "Code Test Ronnie Voss";
-			productReference = 2E4E51EC1F8EE82700E5A438 /* Code Test Ronnie Voss.app */;
+			productReference = 2E4E51EC1F8EE82700E5A438 /* Contacts.app */;
 			productType = "com.apple.product-type.application";
 		};
 		2E4E52041F8EE82700E5A438 /* Code Test Ronnie VossTests */ = {
@@ -215,20 +215,23 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0900;
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = "Ronnie Voss";
 				TargetAttributes = {
 					2E4E51EB1F8EE82700E5A438 = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 1100;
 						ProvisioningStyle = Automatic;
 					};
 					2E4E52041F8EE82700E5A438 = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 1100;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 2E4E51EB1F8EE82700E5A438;
 					};
 					2E4E520F1F8EE82700E5A438 = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 1100;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 2E4E51EB1F8EE82700E5A438;
 					};
@@ -365,6 +368,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -372,6 +376,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -422,6 +427,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -429,6 +435,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -469,7 +476,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.rvoss.Code-Test-Ronnie-Voss";
 				PRODUCT_NAME = Contacts;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -485,7 +492,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.rvoss.Code-Test-Ronnie-Voss";
 				PRODUCT_NAME = Contacts;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -501,9 +508,9 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.rvoss.Code-Test-Ronnie-VossTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Code Test Ronnie Voss.app/Code Test Ronnie Voss";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Contacts.app/Contacts";
 			};
 			name = Debug;
 		};
@@ -518,9 +525,9 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.rvoss.Code-Test-Ronnie-VossTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Code Test Ronnie Voss.app/Code Test Ronnie Voss";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Contacts.app/Contacts";
 			};
 			name = Release;
 		};
@@ -534,7 +541,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.rvoss.Code-Test-Ronnie-VossUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "Code Test Ronnie Voss";
 			};
@@ -550,7 +557,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.rvoss.Code-Test-Ronnie-VossUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "Code Test Ronnie Voss";
 			};

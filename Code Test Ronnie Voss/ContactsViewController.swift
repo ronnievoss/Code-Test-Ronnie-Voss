@@ -68,7 +68,7 @@ class ContactsViewController: UITableViewController, NSFetchedResultsControllerD
     override func numberOfSections(in tableView: UITableView) -> Int {
         if fetchedResultsController.sections!.count > 0 {
             tableView.backgroundView = nil
-            self.tableView.separatorStyle = UITableViewCellSeparatorStyle.singleLine
+            self.tableView.separatorStyle = UITableViewCell.SeparatorStyle.singleLine
             return (fetchedResultsController.sections?.count)!
         } else {
             let noDataLabel: UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: self.tableView.bounds.size.width, height: self.tableView.bounds.size.height))
@@ -77,7 +77,7 @@ class ContactsViewController: UITableViewController, NSFetchedResultsControllerD
             noDataLabel.textColor = UIColor.darkGray
             noDataLabel.textAlignment = NSTextAlignment.center
             self.tableView.backgroundView = noDataLabel
-            self.tableView.separatorStyle = UITableViewCellSeparatorStyle.none
+            self.tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
         }
         return 0
     }
@@ -109,7 +109,7 @@ class ContactsViewController: UITableViewController, NSFetchedResultsControllerD
         return fetchedResultsController.sectionIndexTitles
     }
 
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             let context = fetchedResultsController.managedObjectContext
             context.delete(fetchedResultsController.object(at: indexPath))
@@ -201,6 +201,8 @@ class ContactsViewController: UITableViewController, NSFetchedResultsControllerD
         case .update:
             break
         case .move:
+            break
+        default:
             break
         }
     }

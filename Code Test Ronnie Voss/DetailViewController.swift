@@ -122,7 +122,7 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         
-        return UITableViewAutomaticDimension
+        return UITableView.automaticDimension
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -178,7 +178,7 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
             if let formattedNumber = phoneNumber?.value?.components(separatedBy: CharacterSet.decimalDigits.inverted).joined(separator: "") {
                 let phoneUrl = "tel://\(String(describing: formattedNumber))"
                 let url:URL = URL(string: phoneUrl)!
-                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                UIApplication.shared.open(url, options: convertToUIApplicationOpenExternalURLOptionsKeyDictionary([:]), completionHandler: nil)
             }
             
         case .emailAddresses:
@@ -187,7 +187,7 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
             if let email = emailAddress?.value {
                 let emailUrl = "mailto://\(String(describing: email))"
                 let url:URL = URL(string: emailUrl)!
-                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                UIApplication.shared.open(url, options: convertToUIApplicationOpenExternalURLOptionsKeyDictionary([:]), completionHandler: nil)
             }
             
         case .addresses:
@@ -197,11 +197,16 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 guard let encodedAddress = addressString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else { return }
                 let mapUrl = "http://maps.apple.com/?address=\(String(describing: encodedAddress))"
                 let url:URL = URL(string: mapUrl)!
-                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                UIApplication.shared.open(url, options: convertToUIApplicationOpenExternalURLOptionsKeyDictionary([:]), completionHandler: nil)
             }
         case .details:
             let url:URL = URL(string: "calshow://")!
-            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            UIApplication.shared.open(url, options: convertToUIApplicationOpenExternalURLOptionsKeyDictionary([:]), completionHandler: nil)
         }
     }
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertToUIApplicationOpenExternalURLOptionsKeyDictionary(_ input: [String: Any]) -> [UIApplication.OpenExternalURLOptionsKey: Any] {
+	return Dictionary(uniqueKeysWithValues: input.map { key, value in (UIApplication.OpenExternalURLOptionsKey(rawValue: key), value)})
 }

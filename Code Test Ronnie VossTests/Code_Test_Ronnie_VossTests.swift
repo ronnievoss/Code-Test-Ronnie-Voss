@@ -8,7 +8,7 @@
 
 import XCTest
 import CoreData
-@testable import Code_Test_Ronnie_Voss
+@testable import Contacts
 
 class Code_Test_Ronnie_VossTests: XCTestCase {
     

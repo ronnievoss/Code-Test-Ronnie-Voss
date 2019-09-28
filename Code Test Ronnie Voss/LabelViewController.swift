@@ -16,7 +16,7 @@ final class LabelViewController: UITableViewController {
     var selectedLabel: String? {
         didSet {
             if let label = selectedLabel {
-                selectedLabelIndex = labels.index(of: label)
+                selectedLabelIndex = labels.firstIndex(of: label)
             }
         }
     }

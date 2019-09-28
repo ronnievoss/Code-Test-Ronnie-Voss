@@ -78,13 +78,13 @@ class AddContactViewController: UITableViewController, UITextFieldDelegate {
         case 0:
             return 0.0
         default:
-            return UITableViewAutomaticDimension
+            return UITableView.automaticDimension
         }
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         guard let sectionInfo = Sections(rawValue: indexPath.section) else {
-            return UITableViewAutomaticDimension
+            return UITableView.automaticDimension
         }
         
         switch sectionInfo {
@@ -226,7 +226,7 @@ class AddContactViewController: UITableViewController, UITextFieldDelegate {
         return true
     }
     
-    override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCellEditingStyle {
+    override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
         if let sectionInfo = Sections(rawValue: indexPath.section) {
             switch sectionInfo {
             case .addresses:
@@ -248,7 +248,7 @@ class AddContactViewController: UITableViewController, UITextFieldDelegate {
         return .delete
     }
     
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         guard let sectionInfo = Sections(rawValue: indexPath.section) else {
             return
         }
@@ -443,13 +443,13 @@ class AddContactViewController: UITableViewController, UITextFieldDelegate {
             ]
             textField.inputAccessoryView = toolbar
             
-            datePickerView.addTarget(self, action: #selector(datePickerValueChanged), for: UIControlEvents.valueChanged)
+            datePickerView.addTarget(self, action: #selector(datePickerValueChanged), for: UIControl.Event.valueChanged)
         }
         return true
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        textField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: UIControlEvents.editingChanged)
+        textField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: UIControl.Event.editingChanged)
     }
     
     @objc func textFieldDidChange(_ textField: UITextField) {
